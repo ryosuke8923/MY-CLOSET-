@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+
+ /* headerバー全体の親要素*/
+ .site-header{
+     background-color: #FFE4B5;
+     display: flex;
+     height: 100px;
+     top: 0px;
+     left: 0px;
+     position: fixed;
+     justify-content: space-between;
+     width: 100%;
+     z-index: 9999;
+ }
+
+ /* active1,2の親要素*/
+ .nav{
+   position: relative;
+   width: 950px; /* 領域の幅を指定 */
+   height: 100px; /* 領域の高さを指定 */
+   margin-top: 0;
+ }
+
+ /* headerの項目（ログイン後）*/
+.active{
+  font-weight: bold;
+  height: 50px;
+  width:170px;
+  text-align: center;
+  position: absolute;
+  float:left;
+  left:20%;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+/* headerの項目（ログイン前）*/
+.active-2{
+  font-weight: bold;
+  height: 50px;
+  width:140px;
+  text-align: center;
+  position: absolute;
+  float:left;
+  margin-top: 40px;
+  margin-left: 60px;
+  left:50%;
+  color:black;
+}
+
+/* logoの親要素 */
+.site-logo{
+    position: relative;
+    width: 300px; /* 領域の幅を指定 */
+    height: 100px; /* 領域の高さを指定 */
+    margin-top: 0;
+}
+
+/* MYCLOSET logo */
+.logo{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*max-width: 100%;
+    max-height: 100%;*/
+    margin-left: 0;
+    object-fit: cover;
+}
+/* ログイン後 */
+.main-1{
+  margin: 160px 5% 0 5%;
+  height: auto;
+  position: relative;
+}
+/*　ログイン前 */
+.main-2{
+  border-style:double;
+  height: 1600px;
+  position: relative;
+  margin-top: 98px;
+}
+/* 親要素 フッター*/
+.site-footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #333;
+    border-style:solid;
+    position: relative;
+    margin-top: 30%;
+}
+/* word フッター */
+.copyright{
+    color: #fff;
+    position: absolute;
+    left:40%;
+    top:25%;
+    width:20%;
+    height:50%;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.Clothes {
+   border-collapse: separate;
+   border-spacing: 70px;
+   margin-left: 30px;
+ }

@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag 'accesses', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class = "top">
+  <p><%= current_hello_user.email%>さんのページ</p>
+</div>
+
+<div class = "explain">
+  <%= image_tag("door.jpg",:class => "icon_door") %>
+</div>
+<% user_id = current_hello_user.email%>
+<div class = "ai">
+  <%= link_to 'マイページへGO！',accesses_show_path(user_id)%>
+</div>

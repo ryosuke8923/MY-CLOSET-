@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag 'accesses', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="top">
+  <h1><%= current_hello_user.email %>さんのCloset</h1>
+</div>
+<p>検索</p>
+<%= form_tag(accesses_show_path(current_hello_user.email), :method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil%>
+<% end %>
+
+<div class="container-3">
+  <h4>
+    <%= link_to 'New Idea', new_idea_path, :class =>"btn btn-default"%>
+  </h4>
+</div>
+
+<table class="Clothes">
+  <tbody>
+    <% i = 0.to_i %>
+    <% @ideas.each do |idea| %>
+      <% if i % 3 == 0%>
+        <tr>
+      <% end %>
+      <% while i < 3 %>
+        <td><%= link_to (image_tag(idea.picture_url, width: 250) if idea.picture.present?), idea %></td>
+        <% i = i + 1.to_i %>
+        <% break %>
+      <% end %>
+      <% if i == 3.to_i%>
+          </tr>
+          <% i = 0%>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'ideas', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class = "container">
+<div class = "idea">
+<h1>New Idea</h1>
+</div>
+
+<%= render 'form', idea: @idea %>
+<div class = "back">
+<%= link_to '戻る', accesses_show_path(current_hello_user.email) %>
+</div>
+
+</div>

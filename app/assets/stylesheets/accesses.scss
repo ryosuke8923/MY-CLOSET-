@@ -1,0 +1,169 @@
+// Place all the styles related to the Accesses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* current_hello_user　の　ページ*/
+.top{
+  font: italic normal bold 30px/150% "Comic Sans MS'",sans-serif;
+}
+.top h1{
+  font: italic normal bold 30px/150% "Comic Sans MS'",sans-serif;
+}
+
+/* hello 背景画像の親要素 */
+.background-container{
+      position: relative;
+      width: 100%; /* 領域の幅を指定 */
+      height: 40%; /* 領域の高さを指定 */
+      top:0;
+      border-style:solid;
+}
+/* hello 背景画像 */
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 0;
+    object-fit: cover;
+    transform: scale(-1, 1);
+}
+/* hello 背景画像上のコメント*/
+.background-container h1{
+  white-space: pre;
+  position: absolute;
+  top: 40%;
+  left: 78%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font:  normal bold 30px/150% "Thomas",sans-serif;
+  font-size: 2.8vw;
+
+}
+/* hello 'ログインはこちらから'*/
+.hello_login{
+  white-space: pre;
+  position: absolute;
+  top: 70%;
+  left: 78%;
+  color: black;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font:  normal bold 20px/150% "Thomas",sans-serif;
+  font-size: 1.8vw;
+
+}
+/* hello ボタン*/
+.hello_button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #00CC66;/*ボタン色*/
+  font-size: 1.7vw;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  position: absolute;
+  width:26%;
+  text-align: center;
+  height: 100px;
+  top: 50%;
+  left:65%;
+  color: black;
+  font-weight: bold;
+}
+/* hello ボタン ation*/
+.hello_button :active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+/* 親要素　MY CLOSET 自宅のクローゼットをWEB上で再現可能に */
+.intro{
+  width:100%;
+  margin-top:2%;
+}
+/* MY CLOSET 自宅のクローゼットをWEB上で再現可能に */
+.intro h1{
+  white-space: pre;
+  text-align: center;
+  font-size: 3vw;
+}
+/* 3つの説明*/
+.intro_container{
+  margin-top:5%;
+  margin-left:4%;
+  width:28%;
+  height: auto;
+  border-style:solid;
+  float:left;
+/* 親要素-アイコン 3つの説明 */
+  .icon_container{
+    margin-top:10%;
+  }
+/* アイコン 3つの説明 */
+  .icon_image{
+    margin-left: 40%;
+    text-align: center;
+    width: 20%;
+  }
+/* タイトル　3つの説明*/
+  .title{
+    text-align: center;
+    margin-top: 3%;
+/* タイトル-下線 3つの説明*/
+    p .b{
+    border-bottom: solid 3px red;
+    }
+  }
+/* 文章 3つの説明 */
+  .sentences {
+    margin-top: 10%;
+    p{
+    font-size: 1.8vw;
+    /*word-break: all;*/
+    white-space: pre-wrap;
+    margin-left:5%;
+    margin-right: 5%;
+    }
+  }
+}
+.explain{
+  position: relative;
+    width: 40%; /* 領域の幅を指定 */
+    height: 50vh; /* 領域の高さを指定 */
+    margin: 1em 0;
+    left:25%;
+  .icon_door{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  }
+}
+
+.ai{
+  width:30%;
+  text-align: center;
+  position: relative;
+  z-index: 11;
+  left:31%;
+  font-size: 3vw;
+}

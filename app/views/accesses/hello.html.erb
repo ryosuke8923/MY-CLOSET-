@@ -1,0 +1,74 @@
+<%= stylesheet_link_tag    'accesses', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="background-container">
+  <%= image_tag("background-2.jpg", :class => "background")%>
+  <h1>         MY CLOSETで
+自分だけのCLOSETを作ろう</h1>
+  <%= button_to "今すぐ始める方はこちらから", {controller: 'users/registrations', action: 'new'}, {method: :get, class: 'hello_button'}%>
+  <%= link_to '＊ ログインはこちらから',new_hello_user_session_path , :class => "hello_login"%>
+</div>
+
+<br></br>
+
+  <div class = "intro">
+    <h1>  MY CLOSET 自宅のクローゼットをWEB上で再現可能に</h1>
+  </div>
+
+  <div class = "intro_container">
+    <div class = "icon_container">
+      <%= image_tag("icon_cloth.jpg", :class => "icon_image")%>
+    </div>
+    <div class = "title">
+      <p><span class= "b">MY CLOSETとは</span></p>
+    </div>
+    <div class = "sentences">
+      <p>あなたは外出先で買い物を
+している時に自分がどのような服を家に持っていたか確認したくなったことはありませんか？
+ついつい同じような服を買ってしまうことはありませんか？
+MY CLOSETとは自分が家に所有している衣服や靴・小物などを登録することで、いつでもどこでも閲覧できます。
+
+      </p>
+    </div>
+  </div>
+
+  <div class = "intro_container">
+    <div class = "icon_container">
+      <%= image_tag("detail.jpg", :class => "icon_image")%>
+    </div>
+    <div class = "title">
+      <p><span class="b">簡単ユーザ登録</span></p>
+    </div>
+    <div class = "sentences">
+      <p>MY CLOSETをご利用いただくにはユーザ登録が必要になります。
+Emailとパスワードの設定のみ
+で簡単に登録することができます。
+ユーザ登録後にログインする
+ことで自分だけのマイページを作ることができます。
+
+
+
+
+      </p>
+    </div>
+  </div>
+
+  <div class = "intro_container">
+    <div class = "icon_container">
+      <%= image_tag("search.jpg", :class => "icon_image")%>
+    </div>
+    <div class="title">
+      <p><span class="b">自分好みの検索方法を</span></p>
+    </div>
+    <div class = "sentences">
+      <p>登録した衣服には自分だけのオリジナルタグをつけることができます。
+たくさんの衣服があってもこのタグを利用することで簡単に検索することができます。
+
+
+
+
+
+
+
+      </p>
+    </div>
+  </div>
