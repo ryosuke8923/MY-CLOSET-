@@ -83,7 +83,7 @@
 .main-1{
   margin: 160px 5% 0 5%;
   height: auto;
-  position: relative;
+  position: relative;  
 }
 /*　ログイン前 */
 .main-2{
@@ -116,6 +116,7 @@
 }
 
 .Clothes {
+   border-style: solid;
    border-collapse: separate;
    border-spacing: 70px;
    margin-left: 30px;

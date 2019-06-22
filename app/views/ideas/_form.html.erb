@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <div class ="container-2">
-<%= form_with(model: idea, local: true) do |form| %>
+<%= form_with(model: idea, local: true, multipart: true) do |form| %>
   <% if idea.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
