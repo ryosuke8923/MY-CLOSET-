@@ -24,51 +24,32 @@ class IdeasController < ApplicationController
   # POST /ideas.json
   def create
     @idea = Idea.new(idea_params)
-    if @idea.save
-      if params[:idea][:picture]
-        File.binwrite("public/post_images/#{@idea.id}.jpg",params[:idea][:picture].read)
-        @idea.update(name: "#{@idea.id}.jpg")
-      else
-        @idea.update(name: "default.jpg")
-      end
-      redirect_to @idea, notice: "Post was successfully created."
-    else
-      render :new
-    end
 
-    #respond_to do |format|
-      #if @idea.save
-        #format.html { redirect_to @idea, notice: 'Idea was successfully created.' }
-        #format.json { render :show, status: :created, location: @idea }
-      #else
-        #format.html { render :new }
-        #format.json { render json: @idea.errors, status: :unprocessable_entity }
-      #end
-    #end
+    respond_to do |format|
+      if @idea.save
+        format.html { redirect_to @idea, notice: 'Idea was successfully created.' }
+        format.json { render :show, status: :created, location: @idea }
+      else
+        format.html { render :new }
+        format.json { render json: @idea.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /ideas/1
   # PATCH/PUT /ideas/1.json
   def update
     if @idea.update(idea_params)
-      if params[:idea][:picture]
-        File.binwrite("public/post_images/#{@idea.id}.jpg", params[:idea][:picture].read)
-        @idea.update(name: "#{@idea.id}.jpg")
+    respond_to do |format|
+      if @idea.update(idea_params)
+        format.html { redirect_to @idea, notice: 'Idea was successfully updated.' }
+        format.json { render :show, status: :ok, location: @idea }
+      else
+        format.html { render :edit }
+        format.json { render json: @idea.errors, status: :unprocessable_entity }
       end
-
-      redirect_to @idea, notice: "Post was successfully updated."
-    else
-      render :edit
+     end
     end
-    #respond_to do |format|
-      #if @idea.update(idea_params)
-        #format.html { redirect_to @idea, notice: 'Idea was successfully updated.' }
-        #format.json { render :show, status: :ok, location: @idea }
-      #else
-        #format.html { render :edit }
-        #format.json { render json: @idea.errors, status: :unprocessable_entity }
-      #end
-    #end
   end
 
   # DELETE /ideas/1

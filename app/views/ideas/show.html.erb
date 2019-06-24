@@ -12,7 +12,7 @@
 
 <p>
   <strong>Picture</strong>
-  <img src="/post_images/<%= @idea.name %>" width= "200px" />
+  <%= image_tag(@idea.picture_url, width: 150) if @idea.picture.present?%>
 </p>
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', accesses_show_path(current_hello_user.email) %>

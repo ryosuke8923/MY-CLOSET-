@@ -23,7 +23,7 @@
         <tr>
       <% end %>
       <% while i < 3 %>
-        <td><%= link_to (image_tag(idea.picture_url, width: 250) if idea.picture.present?), idea %></td>
+        <td><%= link_to (image_tag(idea.picture_url, width: 150) if idea.picture.present?), idea %></td>
         <% i = i + 1.to_i %>
         <% break %>
       <% end %>
