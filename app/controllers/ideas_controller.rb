@@ -9,6 +9,8 @@ class IdeasController < ApplicationController
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    @other = Idea.where.not(id: @idea.id).where(name: @idea.name).order("RANDOM()").first
+    @other1 = Idea.where.not(id: @idea.id).where(description: @idea.description).order("RANDOM()").first
   end
 
   # GET /ideas/new

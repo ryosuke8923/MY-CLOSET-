@@ -17,7 +17,6 @@
       width: 100%; /* 領域の幅を指定 */
       height: 40%; /* 領域の高さを指定 */
       top:0;
-      border-style:solid;
 }
 /* hello 背景画像 */
 .background {
@@ -166,4 +165,8 @@
   z-index: 11;
   left:31%;
   font-size: 3vw;
+}
+
+.container-3 p{
+  float: right;
 }

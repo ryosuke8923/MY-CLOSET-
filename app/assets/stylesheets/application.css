@@ -87,7 +87,6 @@
 }
 /*　ログイン前 */
 .main-2{
-  border-style:double;
   height: 1600px;
   position: relative;
   margin-top: 98px;
@@ -117,6 +116,6 @@
 
 .Clothes {
    border-collapse: separate;
-   border-spacing: 70px;
-   margin-left: 30px;
+   border-spacing: 50px;
+   margin-left: 1px;
  }

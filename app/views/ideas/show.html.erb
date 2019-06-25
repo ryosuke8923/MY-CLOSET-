@@ -1,18 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>ジャンル:</strong>
   <%= @idea.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>タグ:</strong>
   <%= @idea.description %>
 </p>
 
 <p>
-  <strong>Picture</strong>
+  <strong>写真</strong>
   <%= image_tag(@idea.picture_url, width: 150) if @idea.picture.present?%>
 </p>
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', accesses_show_path(current_hello_user.email) %>
+<%= link_to '編集', edit_idea_path(@idea) %> |
+<%= link_to '削除', @idea, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>|
+<%= link_to '戻る', accesses_show_path(current_hello_user.email) %>
+
+<br></br>
+このアイテムと似ているものはこちら<br>
+<% if @other.present? %>
+  <%= link_to (image_tag(@other.picture_url,width:150) if @other.picture.present?), @other %>
+<% end %>
+<% if @other1.present? %>
+  <%= image_tag(@other1.picture_url,width:150) if @other1.picture.present? %>
+<% end %>

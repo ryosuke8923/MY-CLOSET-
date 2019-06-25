@@ -1,0 +1,30 @@
+あなたが付けたジャンル・タグを確認できます<br><br>
+○ジャンル<br>
+<% janru = []%>
+<% @idea.each do |idea| %>
+  <% if janru.include?(idea.name)%>
+    <% next %>
+  <% end %>
+  <% if idea.name.present?%>
+    #<%= idea.name%>
+  <% end %>
+  <% janru.push(idea.name) %>
+<% end %>
+<br><br>
+
+○タグ<br>
+<% tag = [] %>
+<% @idea.each do |idea| %>
+  <% if tag.include?(idea.description)%>
+    <% next %>
+  <% end %>
+  <% if idea.description.present?%>
+    #<%= idea.description%>
+  <% end %>
+  <% tag.push(idea.description) %>
+<% end %>
+<br><br>
+
+
+
+<%= link_to '戻る', accesses_show_path %>

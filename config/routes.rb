@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   root 'accesses#hello'
 
+  get 'accesses/tag/:email', :to => "accesses#tag", :as => "accesses_tag"
+
 
   resources :ideas
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
