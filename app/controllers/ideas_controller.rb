@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_access, only: [:show]
   # GET /ideas
   # GET /ideas.json
   def index
@@ -9,8 +10,9 @@ class IdeasController < ApplicationController
   # GET /ideas/1
   # GET /ideas/1.json
   def show
-    @other = Idea.where.not(id: @idea.id).where(name: @idea.name).order("RANDOM()").first
-    @other1 = Idea.where.not(id: @idea.id).where(description: @idea.description).order("RANDOM()").first
+    @others = @other.search(params[:search])
+    @d = @others.where.not(id: @idea.id).where(name: @idea.name).order("RANDOM()").first
+    @d1 = @others.where.not(id: @idea.id).where(description: @idea.description).order("RANDOM()").first
   end
 
   # GET /ideas/new
@@ -59,7 +61,8 @@ class IdeasController < ApplicationController
   def destroy
     @idea.destroy
     respond_to do |format|
-      format.html { redirect_to ideas_url, notice: 'Idea was successfully destroyed.' }
+      user_id = current_hello_user.email
+      format.html { redirect_to accesses_show_path(user_id), notice: 'Idea was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -73,6 +76,11 @@ class IdeasController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
       params.require(:idea).permit(:name, :description,:user_id,:picture)
+    end
+
+    def set_access
+      user_id = current_hello_user.email
+      @other = Idea.where(user_id: user_id)
     end
 
 

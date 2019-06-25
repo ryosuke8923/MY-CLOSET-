@@ -20,9 +20,9 @@
 
 <br></br>
 このアイテムと似ているものはこちら<br>
-<% if @other.present? %>
-  <%= link_to (image_tag(@other.picture_url,width:150) if @other.picture.present?), @other %>
+<% if @d.present? %>
+  <%= link_to (image_tag(@d.picture_url, width: 200) if @d.picture.present?), @d ,:class => "cloth"%>
 <% end %>
-<% if @other1.present? %>
-  <%= image_tag(@other1.picture_url,width:150) if @other1.picture.present? %>
+<% if @d1.present? %>
+  <%= link_to (image_tag(@d1.picture_url,width:200) if @d1.picture.present?), @d1, :class => "cloth" %>
 <% end %>
