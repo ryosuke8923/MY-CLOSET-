@@ -1,10 +1,15 @@
 <%= stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag 'ideas', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-
-<h1>Editing Idea</h1>
+<div class = "container">
+<div class = "idea">
+<h1>編集</h1>
+</div>
 
 <%= render 'form', idea: @idea %>
 
-<%= link_to 'Show', @idea %> |
-<%= link_to 'Back', accesses_show_path(current_hello_user.email) %>
+<div class = "back">
+<%= link_to '戻る', @idea %> |
+<%= link_to '一覧へ', accesses_show_path(current_hello_user.email) %>
+</div>
+</div>
