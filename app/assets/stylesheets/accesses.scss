@@ -170,3 +170,31 @@
 .container-3 p{
   float: right;
 }
+
+.riyou{
+  text-align: center;
+  margin-top: 60%;
+}
+
+.container_riyou{
+  position:relative;
+  margin-top: 5%;
+  margin-left:7.5%;
+  height: 15%;
+  width:23%;
+  border-style: solid;
+  float:left;
+}
+.riyou_photo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 0;
+    object-fit: cover;
+}
